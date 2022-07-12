@@ -17,6 +17,10 @@ const route = require("./route/route");
 const { use } = require('./route/route');
 app.use("/", route) 
 
+app.get('/', (req, res, next) => {
+    res.send('Hello, Heroku!');
+  });
+
 
 app.listen(process.env.PORT || 5000, '0.0.0.0' , () => {
  console.log(`서버가 실행됩니다. http://localhost:5000`);
