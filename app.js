@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 // const port = 5000;          //서버 포트 번호 (로컬 3000 -> 5000으로 유연성있게 변경하였으나, 추후 문제시 재 변경)
 // const port = process.env.NODE_ENV || 3001;
+
 //바디 파서
 var bodyParser = require("body-parser");
 
