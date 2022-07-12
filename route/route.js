@@ -95,6 +95,9 @@ const sessionInfo = session({
  });   
 
 
+router.get("/",
+           controller.mainScreen);
+
 router.post("/check-Id-Duplication", 
              controller.idDuplication);       
 

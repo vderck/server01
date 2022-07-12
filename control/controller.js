@@ -16,8 +16,13 @@ const FileStore = require('session-file-store')(session); // 1
 //쿠키
 const { Cookie } = require('express-session');
 
-//파일 읽기 & 쓰기 모듈
-var fs = require('fs'); // 파일 읽기, 쓰기 등 을 할 수 있는 모듈
+// //파일 읽기 & 쓰기 모듈
+// var fs = require('fs'); // 파일 읽기, 쓰기 등 을 할 수 있는 모듈
+
+
+const mainScreen = (req,res,next) => {
+  res.send('서울 U 에듀 서버 접속');
+  };
 
 
 const newAccount = (req, res, next) => {
@@ -129,6 +134,7 @@ const login = (req,res,next) => {
 };
 
   module.exports = {
+    mainScreen,
     newAccount,
     idDuplication,
     login
