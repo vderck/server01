@@ -112,14 +112,14 @@ const login = (req,res,next) => {
     if(results[0].success === 1){
       console.log(req.sessionID);
       res.setHeader('Set-Cookie', 'big_cookie=choco');
-      res.end('Cookie!!');
-      // res.redirect("https://master--gleeful-mooncake-b7be4b.netlify.app/html/login.html");
+      // res.end('Cookie!!');
+      res.redirect("https://seouluclient.herokuapp.com/html/login.html");
     } else {
       req.session.isLoggedIn = false;
       console.log(req.sessionID);
       res.setHeader('Set-Cookie', 'big_cookie=choco');
-      res.end('Cookie!!');
-      // res.redirect("https://master--gleeful-mooncake-b7be4b.netlify.app/html/login.html");
+      // res.end('Cookie!!');
+      res.redirect("https://seouluclient.herokuapp.com/html/login.html");
     }
   });
 
