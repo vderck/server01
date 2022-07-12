@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;          //서버 포트 번호 
+const port = 5000;          //서버 포트 번호 (로컬 3000 -> 5000으로 유연성있게 변경하였으나, 추후 문제시 재 변경)
 
 //바디 파서
 var bodyParser = require("body-parser");
@@ -17,7 +17,7 @@ const { use } = require('./route/route');
 app.use("/", route) 
 
 
-app.listen(port, '0.0.0.0' , () => {
+app.listen(process.env.PORT || port, '0.0.0.0' , () => {
  console.log(`서버가 실행됩니다. http://localhost:${port}`);
 });
 
