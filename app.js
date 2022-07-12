@@ -18,8 +18,8 @@ const { use } = require('./route/route');
 app.use("/", route) 
 
 
-app.listen(process.env.NODE_ENV || 3001, '0.0.0.0' , () => {
- console.log(`서버가 실행됩니다. http://localhost:3001`);
+app.listen(process.env.PORT || 5000, '0.0.0.0' , () => {
+ console.log(`서버가 실행됩니다. http://localhost:5000`);
 });
 
 // // Keep-Alive Timeout 값 변경
